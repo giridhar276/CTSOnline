@@ -271,6 +271,302 @@ if 10 in alist:
 
 
 
+file handling
+--------------
+
+working with flat files  ( .csv  .log  .conf  .txt  .... )
+----------------------------------------------------------
+
+
+opening the file
+---------------
+
+syntax:     object = open(filename, mode)
+example:       fr  = open("clients.txt","r")  --> read operation
+
+               fw  = open("clients.txt","w")  --> write operation
+	       case1 : If the file is not existing.. file will be created
+               case2 : If the file is already existing...  it overwrites  the file
+
+               fa  = open("clients.txt","a")  --> append operation
+	       case1 : If the file is not existing.. file will be created
+               case2 : If the file is already existing...  it appends the output to the file
+
+closing the file
+----------------
+fr.close()
+fw.close()
+fa.close()
+
+
+read operation
+----------------
+-read line by line
+-reading the complete file into list   ( fr.readlines())  ---------> will return the list of all the lines
+-reading the complete file into string ( fr.read() )  --------------> will return the string
+-csv library
+-pandas library
+-json library
+
+
+
+
+
+
+
+
+working with third party files ( .docx doc .xlsx .pdf  mp4 .... )
+------------
+
+1. syntax error
+2. runtime error( sementic error)
+
+exception handling
+-----------------
+Handling the exceptions in the runtime is known as exception handling.
+
+
+try
+except
+else     ( optional)
+finally  ( optional)
+raise    ( optional)
+
+
+user defined functions (or) definition (or) subroutine
+--------------------------------------------------------
+
+function is set of lines defined for the reusability purpose.
+
+
+passing arguments
+-----------------
+fixed arguments
+default arguments
+keyword arguments
+variable length arguments
+
+
+
+libraries
+------------
+
+- builtin libraries
+- third party libraries
+
+
+
+builtin libraries : builtin libraries are generally(logging , math , string , mail operations , ftp  , os operations ) used by everyone and are  installed with python itself.
+
+
+third party libraries : Depending on the customized requirement ( cloud integration, db handling , ML , web , image processing ) it is job of developer to install this third party library from www.pypi.org
+
+2 ways of installing third party library
+-----------
+- installing the library with pip tool /  easy_install tool
+- installing manually
+
+
+
+
+importing library      ( all the methods will be imported )
+--------------------
+import math
+print(math.floor(34.4))
+print(math.tan(2))
+
+
+importing required methods ONLY  ( . operator is NOT required)
+-------------------------------
+from math import tan,floor
+print(tan(3))
+print(floor(45.5))
+
+
+importing with alias name
+-------------------------
+import math as m
+print(m.floor(34.4))
+print(m.tan(3))
+
+
+Installing 3rd party library
+---------------------------
+
+In the Anaconda prompt / console
+
+pip install cx_Oracle
+
+
+
+
+
+
+
+
+
+
+notepad : https://notepad.pw/0hb29g07
+
+
+
+
+frequently used builtin libraries
+-----------------------------------------
+os         : os level activities
+math       : mathematical operations
+sys        :  sys and python config data
+shutil     : copy,move, rmtree  etc
+urllib     : read the web, downloading the files
+logging    : logging all the events
+smtplib    : sending the mails
+ftplib     : performing ftp operations
+sysconfig  :  sys and python config data
+zipfile    : create/extract the zip files
+rarfile    : create/extract the rar files
+cryptopgraphy : encrypting and decrypting the data or files
+tarfile    : create/extract the tar files
+filecmp    : comparing files or directories
+sqlite3    : python default database
+csv        : reading/writing csv files
+xml        : reading/writing xml files
+calendar   : display month,year calendar info
+datetime   : working with date n time
+time       : working with date n time
+fractions  : working with decimal values
+glob       : display all the files
+heapq      : more of array operations ( getting largest among list )
+subprocess : executing system commands in python (  subprocess.getoutput("ls -ltr")
+pdb        : python debugger
+platform   : platform information
+random     : random operations ( shuffling , random digit ... )
+re         : grep + awk + sed
+socket     : networking programming
+stat       : stats of the file
+statistics : basic statistics
+telnetlib  : accessing remote servers    
+
+
+mysql steps
+-------------
+
+displaying all the databases
+------------------------------
+show databases ;
+
+create database
+-------------------
+create database cts ;
+
+accessing your database
+----------------------
+use cts ;
+
+creating the table
+------------------
+create table realestate ( street varchar(100) , city varchar(100) );
+
+insert records
+--------------
+insert into realestate values('101 MG Road' ,'Hyderabad') ;
+insert into realestate values('Beach Road', 'Chennai');
+
+display all the records
+-----------------------
+select * from realestate ;
+
+view the structure of table
+----------------------------
+desc realestate ;
+
+
+
+re  ( regex)
+---
+- search
+- match   ( check ONLY at the beginning of string)
+- replacing(sub)
+- findall
+
+metacharacters or wildcard characters
+------------------------------------------
+^  :  match at the beginning of the string
+      re.search("^python",line)
+
+$  : match at the end of the string
+      re.search("python$",line)
+
+*  : zero or more occurences of the preceding characte
+      re.search("pyt*hon",line)
+      python     ---> valid
+      pytttthon  ---> valid
+      pyhon      ---> valid
+
++  : one ore more occurence of the preceding character
+      re.search("pyt+hon",line)
+
+      python     ---> valid
+      pytttthon  ---> valid
+      pyhon      ---> Invalid
+
+
+?  : either zero or one occurence of the preceding
+      re.search("pyt?hon",line)
+      python     ---> valid
+      pytttthon  ---> Invalid
+      pyhon      ---> valid
+
+.  : any character or digit
+      re.search(".ython",line)
+    
+      python  --> valid
+      1ython  --> valid 
+      qython  --> valid
+
+
+() : (perl|python)
+      re.search("python|perl|unix",line)
+    
+
+[] : charcter class
+      re.search("[qpyg]ython",line)
+     qython  valid
+     python  valid  
+     yython  valid
+     eython  Invalid
+
+{} : { min,max}
+     min to max occurences of the preceding character
+
+     re.search("pyt{4}hon",line)
+     python    Invalid
+     pyttthon  Valid
+     pyhon     Invalid
+
+\d  : any digit
+
+\w  : any word boundary
+
+\s  : whitespace
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
