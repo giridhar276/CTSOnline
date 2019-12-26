@@ -1,0 +1,6 @@
+50,python
+49,scala
+48,ml
+47,mondodb
+46,nosql
+45,hadoop

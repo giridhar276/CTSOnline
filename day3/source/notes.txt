@@ -1,0 +1,433 @@
+in AI
+======
+python
+R
+SAS 
+
+python IDEs
+------------
+
+IDLE  ( python.org  -- light weighted one )
+
+pycharm
+
+anaconda -   spyder IDE
+
+
+
+****** Everything in python is object *******
+****** Every object contains set of methods *****
+
+python objects
+----------------
+number
+string
+list
+tuple
+dictionary
+set
+
+number
+-------
+number can be integer or decimal or octal or hexa
+
+val = 10
+aval = 454.3
+
+string
+------
+string can be defined in single or double or triple quotes.
+aname = 'python programming'
+bname = "scala programming"
+cname = """unix shell programming"""
+
+
+list  ( array in C ) ( mutable)
+-----
+list is simply set of elements.
+Elements can be set of numbers or strings or any combination
+list elements are defined in []
+
+alist =[10,20,30,40]
+blist =['unix','hadoop','scala']
+clist = [10,20,30,"hadoop",50]
+
+
+tuple  ( READ ONLY , immutable) 
+------
+- tuple contains set of elements
+- Elements can be set of numbers or strings or any combination.
+- tuple elements are defined in ().
+- ****** Elements inside tuple cannot be modified directly******
+- tuple elements are immutable
+
+
+atup = (10,45,54)
+btup = ('unix','oracle','cloud')
+ctup = (10,20,30,"hadoop")
+print(atup)
+print(atup[0]) # 10
+
+dictionary
+-----------
+dictionary contains elements in key-value pairs
+dictionary elements are defined in {}.
+In dictionary .. keys are always UNIQUE
+
+syntax :     object = {key:value , key:value , key:value }
+example:     book = {"chap1":10 ,"chap2": 20 ,"chap3":30  ,"chap4":30 }
+             nums = {1:2,3:4,5:6}
+             book = {"chap1":[10,'Mark','200pages'] ,"chap2":[120,'Rita','400pages']  }
+
+             info = {1:{'chap1':[10,'Mark','200pages']},2:{'chap2':[120,'Rita','400pages'] }
+
+
+set
+-----
+set is unordered collection of UNIQUE elements of same type
+set elements are defined in {}.
+
+aset = {10,10,10,10,10,20}
+
+
+
+builtin function  & methods
+---------------------------
+
+-methods are object specific.
+-all the methods are accessible with . operator  
+
+
+functions are common across all the objects.
+
+
+print()
+list()
+tuple()
+len()
+help()
+
+
+How to display all the list of builtin functions ?
+=====================================================
+In the console ...
+
+dir(__builtins__) 
+
+
+print() :
+len()   : display the length of any object
+input() : capture any string from the keyboard  ( scanf in c  , read in bash )
+range() : display the range of numbers 
+id()    : display some unique identity of the object
+type()  : check the type of object
+isinstance():will return the boolean based on type of object
+max()   : largest number
+min()   : smallest
+sum()   : total of the list
+open()  : open the file
+          fobj = open(filename,mode)
+
+zip()   : combine 2 lists
+enumerate(): read list or tuple with indexing
+
+typecasting functions ( converting from one object to another object )
+--------------------- 	
+list()
+tuple()
+str()
+int()
+dict()
+set()
+float()
+oct()
+hex()
+
+
+
+
+
+
+
+
+
+commenting in python
+---------------------
+
+single line comment :  (# )
+----------------------
+
+multi line comment :
+-------------------
+all the lines defined in between ''' and ''' are ignored by interpreter.
+
+
+
+statements
+-----------
+
+conditional statements
+--------------------
+if
+if-else
+if-elif-elif-elif... else
+
+
+control statements
+------------------
+for
+while
+
+
+jump statements
+---------------
+break
+continue
+
+
+
+
+############### if #######
+level1
+level1
+level1
+level1
+if cond:
+	level2
+	level2
+	level2
+
+
+#################### if -else #############
+level1
+level1
+if cond:
+	level2
+	level2
+	level2
+else:
+	level2
+	level2
+
+
+############## if-elif-elif-elif-else
+
+level1
+level1
+if cond1:
+	level2
+	level2
+elif cond2:
+	level2
+	level2
+elif cond3:
+	level2
+	level2
+else:
+	level2
+	level2
+
+operators
+----------
+
+arithmetic operators :  + - % *  /
+-----------------------
+
+logical operators  :  and     or   not
+-----------------------                     
+                     if  len(name) > 0  and name.isupper() :
+			# do something
+                     if  a < 10 or  a > 100 :
+
+
+assignment operator : ( ++ and -- are NOT allowed in python )
+----------------------
+val =10
+
+val +=10  or  val = val +10
+val *=10  or  val = val * 10
+
+relational operators :    <   <=      >      >=    ==     !=
+------------------------
+
+special operators :     in   
+--------------------	 
+
+                        as ( used in libraries and exception handling)
+
+
+lang = "perl,unix,hadoop,scala,spark,ruby,go"
+if 'python' in lang:
+	print("exists")
+
+alist =[10,20,30]
+if 10 in alist:
+	print("exists")
+
+
+
+
+
+
+
+
+file handling
+--------------
+
+working with flat files  ( .csv  .log  .conf  .txt  .... )
+----------------------------------------------------------
+
+
+opening the file
+---------------
+
+syntax:     object = open(filename, mode)
+example:       fr  = open("clients.txt","r")  --> read operation
+
+               fw  = open("clients.txt","w")  --> write operation
+	       case1 : If the file is not existing.. file will be created
+               case2 : If the file is already existing...  it overwrites  the file
+
+               fa  = open("clients.txt","a")  --> append operation
+	       case1 : If the file is not existing.. file will be created
+               case2 : If the file is already existing...  it appends the output to the file
+
+closing the file
+----------------
+fr.close()
+fw.close()
+fa.close()
+
+
+read operation
+----------------
+-read line by line
+-reading the complete file into list   ( fr.readlines())  ---------> will return the list of all the lines
+-reading the complete file into string ( fr.read() )  --------------> will return the string
+-csv library
+-pandas library
+-json library
+
+
+
+
+
+
+
+
+working with third party files ( .docx doc .xlsx .pdf  mp4 .... )
+------------
+
+1. syntax error
+2. runtime error( sementic error)
+
+exception handling
+-----------------
+Handling the exceptions in the runtime is known as exception handling.
+
+
+try
+except
+else     ( optional)
+finally  ( optional)
+raise    ( optional)
+
+
+user defined functions (or) definition (or) subroutine
+--------------------------------------------------------
+
+function is set of lines defined for the reusability purpose.
+
+
+passing arguments
+-----------------
+fixed arguments
+default arguments
+keyword arguments
+variable length arguments
+
+
+
+libraries
+------------
+
+- builtin libraries
+- third party libraries
+
+
+
+builtin libraries : builtin libraries are generally(logging , math , string , mail operations , ftp  , os operations ) used by everyone and are  installed with python itself.
+
+
+third party libraries : Depending on the customized requirement ( cloud integration, db handling , ML , web , image processing ) it is job of developer to install this third party library from www.pypi.org
+
+2 ways of installing third party library
+-----------
+- installing the library with pip tool /  easy_install tool
+- installing manually
+
+
+
+
+importing library      ( all the methods will be imported )
+--------------------
+import math
+print(math.floor(34.4))
+print(math.tan(2))
+
+
+importing required methods ONLY  ( . operator is NOT required)
+-------------------------------
+from math import tan,floor
+print(tan(3))
+print(floor(45.5))
+
+
+importing with alias name
+-------------------------
+import math as m
+print(m.floor(34.4))
+print(m.tan(3))
+
+
+Installing 3rd party library
+---------------------------
+
+In the Anaconda prompt / console
+
+pip install cx_Oracle
+
+
+
+
+
+
+
+
+
+
+notepad : https://notepad.pw/0hb29g07
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
