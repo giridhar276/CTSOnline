@@ -558,6 +558,32 @@ $  : match at the end of the string
 
 
 
+python setup.py install
+
+
+
+
+will display all the list of 3rd party libraries
+-----------------------------------------------
+pip list
+
+installing the library
+-----------------------
+pip install pymysql
+
+installing particular version
+-------------------------
+pip install pymysql == 0.9.8
+
+remove the library
+-------------------
+pip uninstall pymysql
+
+installing the library manually with pip tool
+--------------------------------------------
+download the required library and navigate to the path
+
+pip install PyMySQL-0.9.3.tar.gz
 
 
 
@@ -569,26 +595,42 @@ $  : match at the end of the string
 
 
 
+OOP
+--------
+
+functional + libraries
+
+OOP        + libraries
+
+
+OOP
+----
+encapsulation
+inheritance
+polomorphism ( function overload + operator overload )
+data hiding
 
 
 
+class  : class is the bluepoint of the model
+         Every class contains member functions and data members
+
+object : object is the instance of the class
+
+self   : self is the instance of object
 
 
 
+Inside class methods... the first parameter will be always self.
 
 
 
+pandas
+-------
 
+- sypder IDE
 
-
-
-
-
-
-
-
-
-
+- jupyter notebook
 
 
 
